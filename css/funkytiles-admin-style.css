@@ -1,0 +1,195 @@
+/* Center the main wrap and give it a card-style appearance */
+.funkytiles-admin-wrap .wrap {
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+/* Center the title and adjust its appearance */
+.funkytiles-admin-wrap .wrap h1 {
+    color: #0073aa;
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Style the instructions for better readability */
+.funkytiles-admin-wrap .instructions {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+/* Enhance form layout for better usability */
+.funkytiles-admin-wrap .funkytiles-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Modern styling for form elements */
+.funkytiles-admin-wrap .funkytiles-form input[type="text"],
+.funkytiles-admin-wrap .funkytiles-form input[type="url"],
+.funkytiles-admin-wrap .funkytiles-form select,
+.funkytiles-admin-wrap .funkytiles-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Focus styles for form elements */
+.funkytiles-admin-wrap .funkytiles-form input[type="text"]:focus,
+.funkytiles-admin-wrap .funkytiles-form input[type="url"]:focus,
+.funkytiles-admin-wrap .funkytiles-form select:focus,
+.funkytiles-admin-wrap .funkytiles-form textarea:focus {
+    border-color: #0073aa;
+    outline: none;
+}
+
+/* Button styling */
+.funkytiles-admin-wrap .funkytiles-form button.button-secondary,
+.funkytiles-admin-wrap .wp-core-ui .button-primary {
+    background-color: #0073aa;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Full width */
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px; /* Space above the button */
+    margin-bottom: 20px; /* Space below the button */
+    display: block;
+}
+
+/* Button hover states */
+.funkytiles-admin-wrap .funkytiles-form button.button-secondary:hover,
+.funkytiles-admin-wrap .wp-core-ui .button-primary:hover {
+    background-color: #005a87;
+}
+
+/* Category Header Styling */
+.funkytiles-category-header {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+/* Container for each category's tiles */
+.funkytiles-category-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+/* Tile listing and action button styling */
+.funkytiles-admin-wrap .funkytiles-tile {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: calc(30.333% - 10px); /* For 3 tiles in a row, accounting for gap */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Ensure the image does not stretch out of its container */
+.funkytiles-admin-wrap .funkytiles-thumbnail {
+    width: 100%; /* Make the image responsive within its tile */
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Styling for edit and remove buttons */
+.funkytiles-admin-wrap .funkytiles-edit-tile,
+.funkytiles-admin-wrap .funkytiles-remove-tile {
+    padding: 8px 12px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.funkytiles-admin-wrap .funkytiles-edit-tile {
+    background-color: #0073aa;
+}
+
+.funkytiles-admin-wrap .funkytiles-remove-tile {
+    background-color: #c00;
+}
+
+.funkytiles-admin-wrap .funkytiles-edit-tile:hover,
+.funkytiles-admin-wrap .funkytiles-remove-tile:hover {
+    opacity: 0.9;
+}
+
+.funkytiles-admin-wrap #category-list li {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%; /* Make category items full-width on small screens */
+    box-sizing: border-box;
+}
+
+.funkytiles-color-pickers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.color-picker-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.color-picker-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.color-picker-group input[type='color'] {
+    border: 1px solid #ddd; /* Optional: for better visibility */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .funkytiles-category-row {
+        justify-content: center; /* Center tiles on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .funkytiles-admin-wrap .wrap {
+        padding: 10px;
+    }
+
+    .funkytiles-admin-wrap .funkytiles-tile {
+        width: calc(50% - 10px); /* 2 tiles in a row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .funkytiles-admin-wrap .funkytiles-tile {
+        width: 100%; /* 1 tile in a row on very small screens */
+    }
+}
